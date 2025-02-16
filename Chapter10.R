@@ -1,6 +1,5 @@
 ##############################################################################
 # Chapter 10 - Loops, The Un-R Way to Iterate
-# 
 ##############################################################################
 
 ##############################################################################
@@ -10,8 +9,7 @@
 ##############################################################################
 
 # print out the 1st 10 numbers
-for (i in 1:10)
-{
+for (i in 1:10) {
   print(i)
 }
 
@@ -19,33 +17,32 @@ for (i in 1:10)
 fruit <- c("apple", "banana", "pomegranate")
 
 # make a variable to hold their lengths, with all NA to start
-fruitLength <-rep(NA, length(fruit))
+fruit_length <- rep(NA, length(fruit))
 
 # give it names
-names(fruitLength) <- fruit
+names(fruit_length) <- fruit
 
 # loop through the fruit assiging their lengths to the result vector
-for (a in fruit)
-{
-  fruitLength[a] <- nchar(a)
+for (a in fruit) {
+  fruit_length[a] <- nchar(a)
 }
 
-# the above is the long way, should leverage R's built-in vectorization to make this easier
-fruitLength2 <- nchar(fruit)
-names(fruitLength2) <- fruit
+# the above is the long way, should leverage R's built-in vectorization
+# to make this easier
+fruit_length2 <- nchar(fruit)
+names(fruit_length2) <- fruit
 
-# compare if fruitLength and fruitLength is identical
-identical(fruitLength, fruitLength2)
+# compare if fruit_length and fruit_length is identical
+identical(fruit_length, fruit_length2)
 
 ##############################################################################
 # 10.2 while Loops
 # Not used as much
 ##############################################################################
 x <- 1
-while (x<=5)
-{
+while (x <= 5) {
   print(x)
-  x <- x+1
+  x <- x + 1
 }
 
 ##############################################################################
@@ -53,19 +50,15 @@ while (x<=5)
 # Using next and break
 ##############################################################################
 
-for (i in 1:10)
-{
-  if (i==3)
-  {
+for (i in 1:10) {
+  if (i == 3) {
     next
   }
   print(i)
 }
 
-for (i in 1:10)
-{
-  if (i==4)
-  {
+for (i in 1:10) {
+  if (i == 4) {
     break
   }
   print(i)
