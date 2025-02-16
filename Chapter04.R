@@ -71,7 +71,8 @@ is.na(z_char)
 # between NA
 # and NULL is that NULL is atomical and cannot exist within a vector. If used
 # within a vector, it will simply disappear. Therefore, NULL is appropriately
-# it not vectorized
+# it
+# not vectorized
 d <- NULL
 is.null(d)
 is.null(7)
